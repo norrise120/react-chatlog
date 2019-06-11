@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
 import ChatBubble from './ChatBubble';
 
 const generateChatBubbleComponents = (events) => {

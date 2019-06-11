@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import chatMessages from './data/messages.json';
-import ChatBubble from './components/ChatBubble'
+// import ChatBubble from './components/ChatBubble'
+import ChatLog from './components/ChatLog'
 
 const App = () => {
   console.log(chatMessages);
@@ -12,7 +13,7 @@ const App = () => {
         <h1 className="App-title">Chat between DIDI and GOGO</h1>
       </header>
       <main className="App-main">
-        <ChatBubble sender='Vladimir' body='why are you arguing with me' time='2018-05-29T22:49:06+00:00'/>
+        <ChatLog bubbles={chatMessages}/>
       </main>
     </div>
   );
