@@ -3,13 +3,19 @@ import '../App.css';
 import Timestamp from './Timestamp';
 
 const ChatBubble = (props) => {
-  // Fill in your code here
+  const {sender, body, time} = props
+
+  let senderClass = 'chat-entry local'
+  if (sender === 'Estragon') {
+    senderClass = 'chat-entry remote'
+  }
+
   return (
-    <section className='chat-entry local'>
-      <h3 className='entry-name'>{props.sender}</h3>
+    <section className={senderClass}>
+      <h3 className='entry-name'>{sender}</h3>
       <section className='entry-bubble'>
-        <p>{props.body}</p>
-        <Timestamp time={props.time} />
+        <p>{body}</p>
+        <Timestamp time={time} />
       </section>
     </section>
   );
